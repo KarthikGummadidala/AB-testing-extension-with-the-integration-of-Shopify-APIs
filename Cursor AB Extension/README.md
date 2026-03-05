@@ -1,6 +1,6 @@
-# A/B Testing Extension – Visually + Shopify
+# A/B Testing Extension – Shopify
 
-Chrome extension that combines **Visually**-style A/B testing with **Shopify** store integration. Manage experiments, connect your store via Shopify APIs, run a client-side A/B engine, and optionally detect Visually experiences on storefronts.
+Chrome extension that combines **Shopify** store integration. Manage experiments, connect your store via Shopify APIs, run a client-side A/B engine, and optionally detect Visually experiences on storefronts.
 
 ## Features
 
@@ -105,7 +105,6 @@ If all of the above behave as expected, the extension is working correctly.
 
 - **Manifest V3** Chrome extension.
 - **Shopify**: Storefront API (GraphQL 2024-01) and optional Admin API.
-- **Visually**: Read experience/variant via `chrome.scripting.executeScript` in MAIN world (`_USE_CASE_CTX._USE_CASE_GA`, `_USE_CASE_CTX._USE_CASE_GA_VARIANT`).
 - **Storage**: `chrome.storage.sync` (experiments, config), `chrome.storage.local` (ab_events, up to 5000 events).
 
 ## Project structure
@@ -132,7 +131,6 @@ Cursor AB Extension/
 
 ## Links
 
-- [Visually for Developers](https://help.visually.io/visually-for-developers)
-- [Visually – Create an A/B test](https://help.visually.io/create-an-a-b-test-visually-help-center)
 - [Shopify Storefront API](https://shopify.dev/docs/api/storefront)
 - [Shopify Admin API](https://shopify.dev/docs/api/admin-rest)
+
