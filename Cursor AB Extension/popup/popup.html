@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A/B Testing – Visually + Shopify</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+    <header class="popup-header">
+      <h1 class="popup-title">A/B Testing</h1>
+      <p class="popup-subtitle">Visually + Shopify</p>
+      <button type="button" class="settings-link" id="openSettingsBtn" title="Settings">⚙</button>
+    </header>
+
+    <section class="section connection-section" id="connectionSection">
+      <h2 class="section-title">Shopify store</h2>
+      <div class="connection-status" id="connectionStatus">
+        <span class="status-dot" id="statusDot"></span>
+        <span class="status-text" id="statusText">Checking…</span>
+      </div>
+      <button type="button" class="btn btn-secondary" id="openSettings">Configure store</button>
+    </section>
+
+    <section class="section experiments-section" id="experimentsSection">
+      <div class="section-header">
+        <h2 class="section-title">Experiments</h2>
+        <button type="button" class="btn btn-primary" id="newExperiment">+ New</button>
+      </div>
+      <ul class="experiment-list" id="experimentList"></ul>
+    </section>
+
+    <section class="section results-section" id="resultsSection">
+      <h2 class="section-title">Results</h2>
+      <div style="display:flex; gap:8px; align-items:center; margin: 6px 0 10px;">
+        <button type="button" class="btn btn-secondary" id="runDiagnostics">Diagnostics</button>
+        <button type="button" class="btn btn-secondary" id="refreshResults">Refresh</button>
+        <button type="button" class="btn btn-secondary" id="clearResults">Clear</button>
+      </div>
+      <div class="results-placeholder" id="resultsPlaceholder">No data yet. Visit a page that runs an experiment.</div>
+      <div class="results-table-wrap hidden" id="resultsTableWrap"></div>
+      <div class="results-table-wrap hidden" id="diagnosticsWrap"></div>
+    </section>
+
+    <section class="section visually-section" id="visuallySection">
+      <h2 class="section-title">Visually</h2>
+      <div class="visually-status" id="visuallyStatus">
+        <p class="hint">Open a storefront with Visually installed to see current experience.</p>
+        <div class="visually-info hidden" id="visuallyInfo"></div>
+      </div>
+    </section>
+
+    <footer class="popup-footer">
+      <a href="https://help.visually.io/visually-for-developers" target="_blank" rel="noopener">Visually for Developers</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
+

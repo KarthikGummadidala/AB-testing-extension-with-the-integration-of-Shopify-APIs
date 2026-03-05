@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings – A/B Testing (Visually + Shopify)</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="options-page">
+    <header class="options-header">
+      <h1>A/B Testing – Visually + Shopify</h1>
+      <p class="header-desc">Connect your Shopify store and manage experiments.</p>
+    </header>
+
+    <section class="card" id="shopifyCard">
+      <h2>Shopify store</h2>
+      <p class="hint">Use your store’s myshopify.com domain (e.g. <code>mystore</code> or <code>mystore.myshopify.com</code>). For Storefront API, use the Headless channel to get a Storefront API token.</p>
+      <div class="form-group">
+        <label for="shopDomain">Store domain</label>
+        <input type="text" id="shopDomain" placeholder="mystore.myshopify.com" />
+      </div>
+      <div class="form-group">
+        <label for="storefrontToken">Storefront API access token</label>
+        <input type="password" id="storefrontToken" placeholder="Storefront API token" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="adminToken">Admin API access token (optional)</label>
+        <input type="password" id="adminToken" placeholder="Admin API token for products/orders" autocomplete="off" />
+        <p class="field-hint">Use a Dev Dashboard app to get an Admin API token if you need Admin API access. The extension primarily uses Storefront API.</p>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="btn btn-primary" id="saveShopify">Save</button>
+        <span class="save-status" id="shopifySaveStatus"></span>
+      </div>
+      <div class="test-result" id="shopifyTestResult"></div>
+    </section>
+
+    <section class="card" id="experimentsCard">
+      <h2>Experiments</h2>
+      <p class="hint">Experiments are stored in this browser and align with Visually concepts: variants, goals, and allocation. Use the popup to create and run live tests.</p>
+      <div id="experimentListOptions"></div>
+    </section>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
+
